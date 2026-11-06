@@ -3,6 +3,7 @@
 from nautobot.apps.jobs import register_jobs
 
 from .cve_tracking import GenerateVulnerabilities, NistCveSyncSoftware
+from .eosl_sync import EoslHardwareNoticeSync
 from .lifecycle_reporting import (
     DeviceHardwareNoticeFullReport,
     DeviceSoftwareValidationFullReport,
@@ -11,6 +12,7 @@ from .lifecycle_reporting import (
 from .model_migration import DLMToNautobotCoreModelMigration
 
 jobs = [
+    EoslHardwareNoticeSync,
     DeviceHardwareNoticeFullReport,
     DeviceSoftwareValidationFullReport,
     InventoryItemSoftwareValidationFullReport,
