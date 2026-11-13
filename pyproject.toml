@@ -23,6 +23,8 @@ packages = [
     { include = "nautobot_device_lifecycle_mgmt" },
 ]
 include = [
+    { path = "nautobot_device_lifecycle_mgmt/data/epsl/**/*.json", format = ["sdist", "wheel"] },
+    { path = "nautobot_device_lifecycle_mgmt/data/epsl/families.json", format = ["sdist", "wheel"] },
     # Poetry by default will exclude files that are in .gitignore
     { path = "nautobot_device_lifecycle_mgmt/static/nautobot_device_lifecycle_mgmt/docs/**/*", format = ["sdist", "wheel"] }
 ]
